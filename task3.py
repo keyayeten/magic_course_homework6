@@ -22,9 +22,9 @@ def my_map(func: callable, a):
             new_list.append(i)
     return new_list
 
-def lst(total_goroda):
+def map(total_goroda):
     return len(total_goroda) > 5
 
-result = my_map(lst, a)
+result = my_map(map, a)
 print('-'.join(result))
 
