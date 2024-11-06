@@ -5,13 +5,13 @@
 # более 5 символов. Вместо остальных названий - строку
 # с дефисом ("-").
 def names_cities(func: callable, str1: str):
-    new_str1 = ""
+
     str1 = str1.split()
     new_str = []
     for city in str1:
         c = func(city)
         new_str.append(c)
-        new_str1 = " ".join(new_str)
+    new_str1 = " ".join(new_str)
     return new_str1
 
 
