@@ -13,3 +13,18 @@
 # [1, 2, 3, 4, 5]
 # Передаваемая функция: функция умножения
 # результат : 120
+
+
+def aggregate(func: callable, lst: list, start_value):
+    res = start_value
+    for i in lst:
+        res = func(res, i)
+    return res
+
+
+def operation(a, b):
+    return a + str(b)
+
+
+if __name__ == '__main__':
+    print(aggregate(operation, [1, 2, 3, 4, 5], ''))
