@@ -9,3 +9,11 @@
 #       ('ключ_2', 'значение_2'),
 #       ...
 #       ('ключ_N', 'значение_N'))
+
+def change_strings(string):
+    return tuple(string.split('='))
+
+
+string = """ключ_1=значение_1 ключ_2=значение_2 
+ключ_3=значение_3 ключ_4=значение_4"""
+print(tuple(map(change_strings, string.split())))

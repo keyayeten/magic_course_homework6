@@ -11,3 +11,13 @@
 # Москва - Вологда - Владивосток Хабаровск
 
 # P.S. Очевидно, функцию для передачи в map нужно сделать самому.
+
+def cities_replace_func(cities):
+    if len(cities) > 5:
+        return cities
+    else:
+        return "-"
+
+
+cities = "Москва Уфа Вологда Тула Владивосток Хабаровск"
+print(*list(map(cities_replace_func, cities.split())))
