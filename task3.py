@@ -11,3 +11,20 @@
 # Москва - Вологда - Владивосток Хабаровск
 
 # P.S. Очевидно, функцию для передачи в map нужно сделать самому.
+
+a = (input('Введите список городов через пробел ').split())
+print(a)
+
+def my_map(func: callable, a):
+    new_list = []
+    for i in a:
+        if func(i):
+            new_list.append(i)
+    return new_list
+
+def map(total_goroda):
+    return len(total_goroda) > 5
+
+result = my_map(map, a)
+print('-'.join(result))
+
